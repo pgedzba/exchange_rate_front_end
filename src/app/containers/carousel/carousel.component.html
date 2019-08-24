@@ -1,0 +1,22 @@
+<div class="carousel-container">
+  <app-slide
+    *ngFor="let element of carouselData; let index = index"
+    [slideData]="element"
+    [ngStyle]="{ display: activeSlide == index ? 'block' : 'none' }"
+  ></app-slide>
+</div>
+<div class="carousel-indicator">
+  <a class="arrow" (click)="previousSlide()">
+    <i class="material-icons">keyboard_arrow_left</i>
+  </a>
+  <a
+    class="indicator"
+    [ngClass]="{ active: activeSlide == index }"
+    *ngFor="let element of carouselData; let index = index"
+    (click)="changeSlide(index)"
+    [title]="element.base"
+  ></a>
+  <a class="arrow" (click)="nextSlide()">
+    <i class="material-icons">keyboard_arrow_right</i>
+  </a>
+</div>
