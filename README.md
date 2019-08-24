@@ -1,5 +1,7 @@
 # Exchange
 
+This project was made as a recruitment task. It's a simple front-end application made in Angular showing exchange rates. The main goal of this project was to create a simple carousel showcasing data.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
 ## Development server
