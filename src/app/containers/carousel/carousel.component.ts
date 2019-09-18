@@ -35,16 +35,7 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.carouselData.forEach(slideData => {
-      this.exchangeRatesService.getExchangeRate(slideData.base, slideData.goal).subscribe(
-        data => {
-          slideData.value = data.rates[slideData.goal];
-        },
-        error => {
-          console.log(error);
-        }
-      );
-    });
+    this.refreshData(0);
   }
 
   previousSlide() {
